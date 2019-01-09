@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CarouselView" customModule="iCarouse" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="165"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ut6-f2-zzc">
+                    <rect key="frame" x="0.0" y="0.0" width="307" height="135"/>
+                    <color key="backgroundColor" red="0.099345211657510354" green="0.10253412845306875" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CRL-we-kTL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="SvP-Gr-cS2"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="Tr2-Kk-jGS"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gar-aF-94Q">
+                    <rect key="frame" x="0.0" y="135" width="307" height="30"/>
+                    <color key="backgroundColor" red="0.33079281150000001" green="0.96237451419999998" blue="0.45697454609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="vDE-HL-lNS"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Gar-aF-94Q" secondAttribute="bottom" id="AcD-18-2zb"/>
+                <constraint firstAttribute="trailing" secondItem="Gar-aF-94Q" secondAttribute="trailing" id="EgL-z5-j2j"/>
+                <constraint firstItem="Gar-aF-94Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F7D-jj-OJy"/>
+                <constraint firstItem="Ut6-f2-zzc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fh8-tX-R7X"/>
+                <constraint firstItem="Gar-aF-94Q" firstAttribute="top" secondItem="Ut6-f2-zzc" secondAttribute="bottom" id="FhV-mJ-nng"/>
+                <constraint firstItem="Ut6-f2-zzc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H8n-lY-xdJ"/>
+                <constraint firstAttribute="trailing" secondItem="Ut6-f2-zzc" secondAttribute="trailing" id="pCu-TK-ikZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="caroucelCollectionView" destination="Ut6-f2-zzc" id="djx-1v-sNC"/>
+                <outlet property="pageControl" destination="Gar-aF-94Q" id="5EE-HA-jvA"/>
+            </connections>
+            <point key="canvasLocation" x="84" y="-93.103448275862078"/>
+        </view>
+    </objects>
+</document>

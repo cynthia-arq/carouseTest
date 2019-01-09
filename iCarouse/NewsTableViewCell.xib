@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="214" id="KGk-i7-Jjw" customClass="NewsTableViewCell" customModule="iCarouse" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="214"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="213.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-j9-s4M">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="214"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-KJ-2ik" customClass="CarouselView" customModule="iCarouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="172"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.26713005363830067" blue="0.17317529309121968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-WY-y6v">
+                                <rect key="frame" x="0.0" y="172" width="338" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAQ-Td-byd">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BAQ-Td-byd" secondAttribute="bottom" id="21i-b8-wC8"/>
+                                    <constraint firstAttribute="trailing" secondItem="BAQ-Td-byd" secondAttribute="trailing" id="Ceq-iO-W7i"/>
+                                    <constraint firstItem="BAQ-Td-byd" firstAttribute="top" secondItem="lUw-WY-y6v" secondAttribute="top" id="Oma-bn-fGt"/>
+                                    <constraint firstAttribute="height" constant="42" id="PPu-SC-3Gz"/>
+                                    <constraint firstItem="BAQ-Td-byd" firstAttribute="leading" secondItem="lUw-WY-y6v" secondAttribute="leading" id="Xvf-Ci-SuY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lUw-WY-y6v" firstAttribute="top" secondItem="y6i-KJ-2ik" secondAttribute="bottom" id="ABZ-8R-JAH"/>
+                            <constraint firstItem="y6i-KJ-2ik" firstAttribute="leading" secondItem="nQQ-j9-s4M" secondAttribute="leading" id="JJJ-e1-nts"/>
+                            <constraint firstItem="y6i-KJ-2ik" firstAttribute="top" secondItem="nQQ-j9-s4M" secondAttribute="top" id="X54-iK-FxG"/>
+                            <constraint firstAttribute="height" constant="214" id="fzM-tY-pUj"/>
+                            <constraint firstAttribute="bottom" secondItem="lUw-WY-y6v" secondAttribute="bottom" id="mdD-Eg-nSc"/>
+                            <constraint firstAttribute="trailing" secondItem="lUw-WY-y6v" secondAttribute="trailing" id="pvb-gn-5hx"/>
+                            <constraint firstAttribute="trailing" secondItem="y6i-KJ-2ik" secondAttribute="trailing" id="vNe-4J-d04"/>
+                            <constraint firstItem="lUw-WY-y6v" firstAttribute="leading" secondItem="nQQ-j9-s4M" secondAttribute="leading" id="xGo-d7-UQj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nQQ-j9-s4M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Atj-iA-LE6"/>
+                    <constraint firstAttribute="bottom" secondItem="nQQ-j9-s4M" secondAttribute="bottom" constant="-0.5" id="o02-NC-I2x"/>
+                    <constraint firstItem="nQQ-j9-s4M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qX4-MM-iRr"/>
+                    <constraint firstAttribute="trailing" secondItem="nQQ-j9-s4M" secondAttribute="trailing" id="qmc-AN-YU8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carouselView" destination="y6i-KJ-2ik" id="z18-eY-gOT"/>
+                <outlet property="titleLabel" destination="BAQ-Td-byd" id="w3g-AR-7hs"/>
+            </connections>
+            <point key="canvasLocation" x="152" y="230.28485757121442"/>
+        </tableViewCell>
+    </objects>
+</document>
